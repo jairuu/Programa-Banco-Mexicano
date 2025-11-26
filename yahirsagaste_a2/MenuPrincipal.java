@@ -49,9 +49,10 @@ public class MenuPrincipal extends JFrame {
             JOptionPane.showMessageDialog(null, "Saldo actual: $" + cuenta.getSaldo());
         });
 
-        btnSalir.addActionListener(e -> System.exit(0));
+        btnSalir.addActionListener(e -> {
+            JOptionPane.showMessageDialog(this, "La sesión ha sido cerrada.");System.exit(0);
+        });
     }
-
     public static void main(String[] args) {
         new MenuPrincipal().setVisible(true);
     }
